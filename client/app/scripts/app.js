@@ -10,11 +10,12 @@
  */
 angular.module('crudApp', [
   'ui.router'
-]).config(function ($stateProvider) {
-  $stateProvider
-    .state('list', {
+]).config(function ($stateProvider, $urlRouterProvider) {
+  $stateProvider.state('list', {
       url: '/',
       templateUrl: 'views/list.html',
       controller: 'ListCtrl'
-    })
+    });
+
+  $urlRouterProvider.otherwise('/');
 });

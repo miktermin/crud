@@ -17,13 +17,14 @@
     </div>
 
     <div ng-if="addOrEditMode">
-        <h3 ng-if="selectedUser.age">Edit User Data</h3>
-        <h3 ng-if="!selectedUser.age">Add User</h3>
+        <h3 ng-if="selectedUser.id">Edit User Data</h3>
+        <h3 ng-if="!selectedUser.id">Add User</h3>
         <form class="col-md-5">
-            <input type="text" class="form-control" placeholder="First name" ng-model="selectedUser.first_name" />
+            <input type="text" class="form-control" placeholder="First name" ng-model="selectedUser.first_name" autofocus />
             <input type="text" class="form-control" placeholder="Last name" ng-model="selectedUser.last_name"/>
             <input type="number" class="form-control" placeholder="Age" ng-model="selectedUser.age"/>
-            <input type="submit" class="form-control" value="Save" ng-click="save()" />
+            <input type="submit" class="form-control" value="Save" ng-show="selectedUser.id" ng-click="saveEdit()" />
+            <input type="submit" class="form-control" value="Save" ng-show="!selectedUser.id" ng-click="save()" />
         </form>
     </div>
 </div>

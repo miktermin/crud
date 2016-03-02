@@ -1,0 +1,15 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "psqlDB": {
+    "name": "psqlDB",
+    "connector": "postgresql",
+    "database": "crud",
+    "host": "localhost",
+    "port": 5432,
+    "username": "postgres",
+    "password": "root"
+  }
+}

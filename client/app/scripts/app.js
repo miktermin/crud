@@ -9,7 +9,8 @@
  * Main module of the application.
  */
 angular.module('crudApp', [
-  'ui.router'
+  'ui.router',
+  'ngResource'
 ]).config(function ($stateProvider, $urlRouterProvider) {
   $stateProvider.state('list', {
       url: '/',
